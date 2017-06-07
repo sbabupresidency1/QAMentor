@@ -1,0 +1,5 @@
+2017-06-07 07:34:26 INFO  Directory:124 - Reading from custom properties
+2017-06-07 07:34:26 INFO  Directory:302 - Setting Reports Dir---C:/Reports
+2017-06-07 07:34:26 INFO  Directory:303 - Setting Results Dir---C:/Reports\Results
+2017-06-07 07:34:31 INFO  TestNGClass:126 - before set driver Thread -----9------------driver------------InternetExplorerDriver: internet explorer on WINDOWS (cd6acbe2-1ad7-470f-adc1-6acbe831c1c3)
+2017-06-07 07:34:31 INFO  TestNGClass:130 - after set driver Thread -----9------------driver------------InternetExplorerDriver: internet explorer on WINDOWS (cd6acbe2-1ad7-470f-adc1-6acbe831c1c3)
