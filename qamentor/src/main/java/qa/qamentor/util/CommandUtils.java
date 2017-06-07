@@ -7,7 +7,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import qa.qamentor.CommonMethods.Edockets;
 import qa.qamentor.commands.ElementActions;
-import qa.qamentor.commands.LayoutActions;
 import qa.qamentor.commands.LocatorBy;
 import qa.qamentor.commands.Manipulation;
 import qa.qamentor.commands.Navigate;
@@ -617,42 +616,6 @@ public class CommandUtils {
 			String product11=getTextMap.get(Integer.valueOf(product1RefStep1));
 			String product21=getTextMap.get(Integer.valueOf(productRefStep1));
 			returnObj = Manipulation.checkTwoValues(product11, product21);
-			break;
-		case "GetScreenResolution":
-			returnObj=LayoutActions.screenResolution(driver);
-			getTextMap.put(stepNo, returnObj.toString());
-			break;
-		case "CompareScreenResolution":
-			returnObj=LayoutActions.compareScreenResolution(driver);
-			getTextMap.put(stepNo, returnObj.toString());
-			break;
-		case "GetElementResolution":
-			returnObj=LayoutActions.elementResolution(driver,element);
-			getTextMap.put(stepNo, returnObj.toString());
-			break;
-		case "VerifyElementsHorizontally":
-			String[] splitreference123=referenceStep.split(",");
-			int refStep123 = new Integer(splitreference123[0]);
-			int refStep23 = new Integer(splitreference123[1]);
-			String getText123=getTextMap.get(Integer.valueOf(refStep123));
-			String getText23=getTextMap.get(Integer.valueOf(refStep23));
-			returnObj=LayoutActions.verifyElementsHorizontally(getText123, getText23);
-			getTextMap.put(stepNo, returnObj.toString());
-			break;
-		case "VerifyElementsVertically":
-			String[] splitreference1234=referenceStep.split(",");
-			int rrefStep123 = new Integer(splitreference1234[0]);
-			int rrefStep23 = new Integer(splitreference1234[1]);
-			String rgetText123=getTextMap.get(Integer.valueOf(rrefStep123));
-			String rgetText23=getTextMap.get(Integer.valueOf(rrefStep23));
-			returnObj=LayoutActions.verifyElementsVertically(rgetText123, rgetText23);
-			getTextMap.put(stepNo, returnObj.toString());
-			break;
-		case "VerifyInnerOutterElements":
-			returnObj=LayoutActions.verifyInnerOutterElements(driver, element1, element2);
-			break;
-		case "CompareImage":
-			returnObj=LayoutActions.compareImage(driver, element, inputData);
 			break;
 		case "HandleSecondWindow":
 			Navigate.handlesecondWindow(driver,element);		
