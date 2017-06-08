@@ -676,6 +676,15 @@ public class CommandUtils {
 		case "GetNewWindow":
 			Manipulation.getNewWindow(driver);
 			break;
+		case "SplitDetails":
+			if (inputData == null && referenceStep != null
+			&& !referenceStep.trim().equals("")) {
+				int refStepValue = new Integer(referenceStep);
+				String refValue= getTextMap.get(Integer.valueOf(refStepValue));
+				returnObj=Manipulation.splitDetails(driver,refValue);
+				getTextMap.put(stepNo, returnObj.toString());
+				break;
+			}	
 
 		}
 		return returnObj;

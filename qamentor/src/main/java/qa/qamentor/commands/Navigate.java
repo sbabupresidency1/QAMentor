@@ -51,6 +51,8 @@ public class Navigate {
 		try
 		{
 			driver.get(url);
+			//waitTime(driver, "5");
+			//Navigate.maximize(driver);
 		}
 
 		catch(Exception e)

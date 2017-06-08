@@ -760,6 +760,14 @@ public class Manipulation extends CommandUtils implements OR {
 		  wait(driver, "3");
 	}
 	
+	public static String splitDetails(WebDriver driver,String element){
+		   String value=element;
+		   String[] val1=value.split("\\s");
+		   String result=val1[0];
+		   System.out.println("result is "+result);
+		   return result;
+		  }
+	
 	public static void browserURLSecurityException(WebDriver driver)
 
 	{

@@ -1,5 +1,6 @@
-2017-06-07 07:34:26 INFO  Directory:124 - Reading from custom properties
-2017-06-07 07:34:26 INFO  Directory:302 - Setting Reports Dir---C:/Reports
-2017-06-07 07:34:26 INFO  Directory:303 - Setting Results Dir---C:/Reports\Results
-2017-06-07 07:34:31 INFO  TestNGClass:126 - before set driver Thread -----9------------driver------------InternetExplorerDriver: internet explorer on WINDOWS (cd6acbe2-1ad7-470f-adc1-6acbe831c1c3)
-2017-06-07 07:34:31 INFO  TestNGClass:130 - after set driver Thread -----9------------driver------------InternetExplorerDriver: internet explorer on WINDOWS (cd6acbe2-1ad7-470f-adc1-6acbe831c1c3)
+2017-06-08 08:13:26 INFO  Directory:124 - Reading from custom properties
+2017-06-08 08:13:26 INFO  Directory:302 - Setting Reports Dir---C:/Reports
+2017-06-08 08:13:26 INFO  Directory:303 - Setting Results Dir---C:/Reports\Results
+2017-06-08 08:13:31 INFO  TestNGClass:96 - before set driver Thread -----9------------driver------------InternetExplorerDriver: internet explorer on WINDOWS (09f64a0c-af20-4819-98f5-b8bd393fcf2d)
+2017-06-08 08:13:31 INFO  TestNGClass:100 - after set driver Thread -----9------------driver------------InternetExplorerDriver: internet explorer on WINDOWS (09f64a0c-af20-4819-98f5-b8bd393fcf2d)
+2017-06-08 08:19:27 INFO  TestNGClass:142 - Thread @ close-----9------------driver------------InternetExplorerDriver: internet explorer on WINDOWS (null)
