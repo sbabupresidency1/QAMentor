@@ -21,16 +21,19 @@ import qa.qamentor.utils.Directory;
 
 public class Edockets extends Manipulation implements OR
 {
-	public static void edocketLogIn(WebDriver driver) throws AWTException, SikuliException {
+	public static void edocketLogIn(WebDriver driver,String Username,String Password) throws AWTException, SikuliException {
 		 // driver.get("http://www.edocketspro.com/");
 		  if(Directory.browser.equalsIgnoreCase("firefox")) {
-		   SikuliActions.type("FFUserName.PNG","babu@edocketspro.com");
+		   SikuliActions.type("FFUserName.PNG",Username);
 		   wait(driver,"3");
-		   SikuliActions.type("FFPassword.PNG","America1*");	
+		   SikuliActions.type("FFPassword.PNG",Password);	
 		   wait(driver,"3");
 		  }
 		  else if(Directory.browser.equalsIgnoreCase("ie")) {
-		   SikuliActions.type("Password.PNG","America1*");
+			  try {
+				  SikuliActions.type("LoginUsernameIE.png", Username);
+			  } catch(Exception e){}
+		   SikuliActions.type("Password.PNG",Password);
 		   
 		  } 
 		 }

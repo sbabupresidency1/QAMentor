@@ -661,7 +661,8 @@ public class CommandUtils {
 			SikuliActions.click(inputData);
 			break;
 		case "EDocketsLogin":
-			Edockets.edocketLogIn(driver);
+			String[] values = inputData.split(",");
+			Edockets.edocketLogIn(driver,values[0],values[1]);
 			break;
 		case "RobotEnter":
 			Navigate.robotEnter(driver);
