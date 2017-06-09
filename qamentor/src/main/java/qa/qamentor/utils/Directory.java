@@ -77,42 +77,9 @@ public class Directory {
 	public static String DEMO_URL=null;
 	public static String URL_PROPERTIES=null;
 	public static boolean reexecution=true;
-	//Mobile Configuration
-	public static String MOBILE_APPPATH=null;
-	public static String MOBILEAPP_APK_NAME=null;
-	public static String MOBILE_DEVICE_NAME=null;
-	public static String MOBILE_DEVICE_VERSION=null;
-	public static String MOBILE_APK_APPPACKAGE=null;
-	public static String MOBILE_DEVICE_TYPE=null;
-	public static String MOBILE_IOSDEVICE_UDID= null;
-	public static String MOBILE_APP_TYPE=null;
-	public static String MOBILE_WEB_BROWSER_NAME=null;
-	public static String MOBILE_WEB_URL=null;
-	//Resolution
-	public static String MOBILE_SCREEN_RESOLUTION_SIZE=null;
-	public static String WEB_SCREEN_RESOLUTION_SIZE=null;
-	//CamSoda
-	public static String CAM_SODA_URL=null;
-	public static String CAM_SODA_USERNAME=null;
-	public static String CAM_SODA_PASSWORD=null;
-	///Lyologic
-	public static String CHOICE_PLUS_URL=null;
-	public static String CHOICE_PLUS_USERNAME=null;
-	public static String CHOICE_PLUS_PASSWORD=null;	
-	public static String ON_COMMERCE_URL=null;
-	public static String ON_COMMERCE_USERNAME=null;
-	public static String ON_COMMERCE_PASSWORD=null;
-	public static String ETIHAD_URL=null;
-	public static String ETIHAD_USERNAME=null;
-	public static String ETIHAD_PASSWORD=null;	
-	public static String CITRIX_USERNAME=null;
-	public static String CITRIX_PASSWORD=null;	
-	public static String ETIHAD_ACTIVITY_PACKAGE=null;
-	public static String ETIHAD_ACTIVITY_NAME=null;
-	public static String MESSAGE_APP_ACTIVITY_PACKAGE=null;
-	public static String MESSAGE_APP_ACTIVITY_NAME=null;
-
- 
+	public static String EDOCKETS_URL=null;
+	public static String EDOCKETS_USERNAME=null;
+	public static String EDOCKETS_PASSWORD=null;
 	
 	/**
 	 * Retrieve values from custom properties
@@ -151,46 +118,18 @@ public class Directory {
 				WaitFor = localProperties.getProperty(			"qamentor.proj.waitSec").trim().toLowerCase();
 				uploadFilePath=localProperties.getProperty(			"qamentor.proj.upload").trim();
 
-				//Mobile Configuration
-				MOBILE_APPPATH=localProperties.getProperty(			"qamentor.mobileapp.apk.path").trim();
-				MOBILEAPP_APK_NAME=localProperties.getProperty(			"qamentor.mobile.apk.name").trim();
-				MOBILE_DEVICE_NAME=localProperties.getProperty(			"qamentor.mobile.devicename").trim();
-				MOBILE_DEVICE_VERSION=localProperties.getProperty(			"qamentor.mobile.version").trim();
-				MOBILE_APK_APPPACKAGE=localProperties.getProperty(			"qamentor.mobile.apppackage.name").trim();
-				MOBILE_APP_TYPE = localProperties.getProperty(			"qamentor.mobile.app.type").trim();
-				MOBILE_WEB_BROWSER_NAME = localProperties.getProperty(			"qamentor.mobile.web.browser").trim();
-				MOBILE_WEB_URL = localProperties.getProperty(			"qamentor.mobile.web.Url").trim();
-				MOBILE_DEVICE_TYPE = localProperties.getProperty(			"qamentor.mobile.device.type").trim();
-				MOBILE_IOSDEVICE_UDID = localProperties.getProperty(			"qamentor.ios.mobile.udid").trim();
-				//Resolution
-				MOBILE_SCREEN_RESOLUTION_SIZE = localProperties.getProperty(			"qamentor.mobile.screen.resolution").trim();
-				WEB_SCREEN_RESOLUTION_SIZE=localProperties.getProperty(			"qamentor.web.screen.resolution.size").trim();
+				
 
 				Properties urlProperties = new Properties();
 				InputStream input = new FileInputStream(testCasePath+"/URL.properties");
 				urlProperties.load(input);
 				
-				CHOICE_PLUS_URL = urlProperties.getProperty("qamentor.choice.url").trim();
-				CHOICE_PLUS_USERNAME = urlProperties.getProperty("qamentor.choice.username").trim();
-				CHOICE_PLUS_PASSWORD = urlProperties.getProperty("qamentor.choice.password").trim();				
-				ON_COMMERCE_URL = urlProperties.getProperty("qamentor.commerce.url").trim();
-				ON_COMMERCE_USERNAME = urlProperties.getProperty("qamentor.commerce.username").trim();
-				ON_COMMERCE_PASSWORD = urlProperties.getProperty("qamentor.commerce.password").trim();
-				ETIHAD_URL = urlProperties.getProperty("qamentor.etihad.url").trim();
-				CITRIX_USERNAME = urlProperties.getProperty("qamentor.citrix.username").trim();
-				CITRIX_PASSWORD = urlProperties.getProperty("qamentor.citrix.password").trim();	
-				ETIHAD_USERNAME = urlProperties.getProperty("qamentor.etihad.username").trim();
-				ETIHAD_PASSWORD = urlProperties.getProperty("qamentor.etihad.password").trim();					
-				ETIHAD_ACTIVITY_PACKAGE = urlProperties.getProperty("android.etihad.package").trim();	
-				ETIHAD_ACTIVITY_NAME = urlProperties.getProperty("android.etihad.name").trim();	
-				MESSAGE_APP_ACTIVITY_PACKAGE = urlProperties.getProperty("android.message.package").trim();	
-				MESSAGE_APP_ACTIVITY_NAME = urlProperties.getProperty("android.message.name").trim();	
+				EDOCKETS_URL = urlProperties.getProperty("qamentor.login.url").trim();
+				EDOCKETS_USERNAME = urlProperties.getProperty("qamentor.login.username").trim();
+				EDOCKETS_PASSWORD = urlProperties.getProperty("qamentor.login.password").trim();
 				
 				
 				
-				/*CAM_SODA_URL = urlProperties.getProperty("qamentor.camsoda.url").trim();
-				CAM_SODA_USERNAME = urlProperties.getProperty("qamentor.camsoda.username").trim();
-				CAM_SODA_PASSWORD = urlProperties.getProperty("qamentor.camsoda.password").trim();*/
 
 				try {
 					if ((headerText != null) && (headerText.length() > 0)) {

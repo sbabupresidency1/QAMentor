@@ -22,19 +22,18 @@ import qa.qamentor.utils.Directory;
 public class Edockets extends Manipulation implements OR
 {
 	public static void edocketLogIn(WebDriver driver,String Username,String Password) throws AWTException, SikuliException {
-		 // driver.get("http://www.edocketspro.com/");
+		  driver.get(Directory.EDOCKETS_URL);
 		  if(Directory.browser.equalsIgnoreCase("firefox")) {
-		   SikuliActions.type("FFUserName.PNG",Username);
+		   SikuliActions.type("FFUserName.PNG",Directory.EDOCKETS_USERNAME);
 		   wait(driver,"3");
-		   SikuliActions.type("FFPassword.PNG",Password);	
+		   SikuliActions.type("FFPassword.PNG",Directory.EDOCKETS_PASSWORD);	
 		   wait(driver,"3");
 		  }
 		  else if(Directory.browser.equalsIgnoreCase("ie")) {
-			  /*try {
-				  SikuliActions.type("LoginUsernameIE.png", Username);
+			 /* try {
+				  SikuliActions.type("LoginUsernameIE.png", Directory.EDOCKETS_USERNAME);
 			  } catch(Exception e){}*/
-		   SikuliActions.type("Password.PNG",Password);
-		   
+		   SikuliActions.type("Password.PNG",Directory.EDOCKETS_PASSWORD);
 		  } 
 		 }
 
