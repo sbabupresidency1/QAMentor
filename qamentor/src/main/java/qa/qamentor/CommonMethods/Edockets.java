@@ -30,9 +30,9 @@ public class Edockets extends Manipulation implements OR
 		   wait(driver,"3");
 		  }
 		  else if(Directory.browser.equalsIgnoreCase("ie")) {
-			  try {
+			  /*try {
 				  SikuliActions.type("LoginUsernameIE.png", Username);
-			  } catch(Exception e){}
+			  } catch(Exception e){}*/
 		   SikuliActions.type("Password.PNG",Password);
 		   
 		  } 

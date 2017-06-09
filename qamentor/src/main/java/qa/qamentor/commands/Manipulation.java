@@ -767,7 +767,30 @@ public class Manipulation extends CommandUtils implements OR {
 		   System.out.println("result is "+result);
 		   return result;
 		  }
-	
+	public static String condtionNotMatch(String GetText1, String GetText2){
+		  String output = "";
+		  System.out.println("Object is Before :" +GetText1);
+		  System.out.println("Object to After : "+GetText2);
+		  try {
+		   //if((GetText1.trim())!=(GetText2.trim()))
+		   if(!GetText1.trim().equalsIgnoreCase(GetText2.trim()))
+		   {
+		    output = "The value is not matched";
+		    return output;
+		   }
+		   else
+		   {
+		    output = "The value"+GetText2+" is Verified";
+		    Assert.fail();
+		    return output;
+		   }
+		  } catch(NoSuchElementException e)
+		  {
+		   log.info("Unable to Matched WebElement: " + output);
+		   output = "The value"+GetText2+" is not Matched";
+		   return output;
+		  }
+		 }
 	public static void browserURLSecurityException(WebDriver driver)
 
 	{

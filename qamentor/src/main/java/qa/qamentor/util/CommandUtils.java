@@ -670,6 +670,7 @@ public class CommandUtils {
 		case "RobotTab":
 		    Navigate.robotTab(driver);
 		    break;
+		
 		case "GetAttributeValue":
 			returnObj =Manipulation.getAttribute(driver, element);
 			getTextMap.put(stepNo, returnObj.toString());
@@ -686,7 +687,26 @@ public class CommandUtils {
 				getTextMap.put(stepNo, returnObj.toString());
 				break;
 			}	
-
+		case "SikuliVerifyElement":
+			SikuliActions.sikuliVerifyElement(inputData);
+			break;
+			
+		case "CheckStringNotMatched":
+		    if (inputData == null && referenceStep != null
+		    && !referenceStep.trim().equals("")) {
+		     String[] referenceSteps = StringUtils.split(referenceStep, ",");
+		     int refStep1 = new Integer(referenceSteps[0]);
+		     int refStep2 = new Integer(referenceSteps[1]);
+		     String getText1 = getTextMap.get(Integer.valueOf(refStep1));
+		     String getText2 = getTextMap.get(Integer.valueOf(refStep2));
+		     returnObj = Manipulation.condtionNotMatch(getText1, getText2);
+		    } else if (inputData != null && referenceStep != null
+		      && !referenceStep.trim().equals("")) {
+		     int refStep2 = new Integer(referenceStep);
+		     String getText1 = getTextMap.get(Integer.valueOf(refStep2));
+		     returnObj = Manipulation.condtionNotMatch(inputData, getText1);
+		    }
+		    break;
 		}
 		return returnObj;
 	}

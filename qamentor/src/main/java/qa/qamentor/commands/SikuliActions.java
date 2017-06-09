@@ -26,6 +26,14 @@ public class SikuliActions {
 		screen.type(pattern, Value); 
 		
 	}
+	public static void sikuliVerifyElement(String image) throws FindFailed {
+		String Path = Directory.uploadFilePath+"\\SikuliImages\\"+image;
+		Screen screen = new Screen();
+		Pattern pattern = new Pattern(Path);
+		screen.wait(pattern, 3000);
+		screen.exists(pattern);
+		System.out.println("Verified Element");
+	}
 	
 	
 
