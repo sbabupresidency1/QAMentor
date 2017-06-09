@@ -430,5 +430,23 @@ public class Navigate {
 		  robot.keyPress(KeyEvent.VK_TAB);
 		  robot.keyRelease(KeyEvent.VK_TAB);
 		 }
+
+	public static void Login(WebDriver driver, String inputData) {
+		// TODO Auto-generated method stub
+	
+			try
+			{
+				driver.get(inputData);
+				
+			
+				qa.qamentor.CommonMethods.Edockets.eDocketLogin();
+			}
+			catch(Exception e)
+			{
+				//qa.qamentor.commands.Manipulation.browserURLSecurityException(driver);
+				qa.qamentor.commands.Manipulation.browserURLSecurityException(driver);
+			//	qa.qamentor.CommonMethods.Edockets.eDocketLogin();
+			}
 	
 }
+	}

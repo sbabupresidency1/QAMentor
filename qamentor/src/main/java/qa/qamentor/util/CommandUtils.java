@@ -707,6 +707,19 @@ public class CommandUtils {
 		     returnObj = Manipulation.condtionNotMatch(inputData, getText1);
 		    }
 		    break;
+		case "Login":
+			if (inputData == null && referenceStep != null
+			&& !referenceStep.trim().equals(""))
+			{
+				int refSteps = new Integer(referenceStep);
+				inputData= getTextMap.get(Integer.valueOf(refSteps));
+			}
+			Navigate.Login(driver, inputData);
+			break;
+		    
+		    
+		    
+		    
 		}
 		return returnObj;
 	}
